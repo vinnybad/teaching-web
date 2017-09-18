@@ -1,0 +1,133 @@
+<html>
+<head>
+
+<!--
+
+- present an alert saying whether the number is correct
+
+-->
+
+<script type="text/javascript">
+/*
+  var foo = 99;
+  console.log("hello");
+  console.log(foo);
+  console.log("Your value is: " + 1000);
+  console.log("Your value is:", 1000);
+*/
+
+var x = Math.floor( 1000 * Math.random() );
+
+
+function guess() {
+/*
+  var something;
+
+
+
+  something = "hi";
+
+*/
+
+/*
+
+- number (int, double, ...)
+- 'a' == "a"  (string)
+- true / false - (boolean)
+- null
+
+*/
+
+
+
+  var allMatchingElems = document.getElementsByName('guessText');
+  var guessText = allMatchingElems[0];
+  var guess = guessText.value;
+
+  var userGuess = parseInt(guess);
+
+  if (userGuess < x) {
+    alert('too low');
+  } else if (userGuess > x) {
+    alert('too high');
+  } else {
+    alert('correct');
+  }
+
+
+/*
+
+// 1:
+if (something) {
+   ...
+}
+
+
+if (something2) {
+  ...
+}
+
+
+
+
+// 2:
+
+if (something) {
+   //. ....
+} else {
+   // ....
+}
+
+
+// 3:
+
+if (something) {
+  // ...
+} else if (something2) {
+  // ...
+} else {
+  // ...
+}
+
+
+// 4:
+
+if (a) {
+  // ...
+} else if (b) {
+  // ...
+} else if (c) {
+  // ...
+} else if (d) {
+  // ....
+} else {
+  // ....
+}
+
+
+
+
+
+*/
+
+}
+
+</script>
+
+</head>
+<body>
+
+  <h1>Guess a number between 1 and 1000!</h1>
+  <div>
+    <input type="text" name="guessText" />
+    <input type="button" value="Guess!" onclick="guess();" />
+  </div>
+
+  <pre>
+    - 1: 123
+    - 2: 234213
+  </pre>
+
+</body>
+</html>
+
